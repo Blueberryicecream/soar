@@ -1,0 +1,141 @@
+* {
+    text-decoration: none;
+}
+
+/* 顶部导航 外层容器 */
+.top-nav {
+    width: 100%;
+    background-color: #333;
+    color: #b0b0b0;
+}
+
+/* 顶部导航 内容器 */
+.top-nav .container {
+    width: 1226px;
+    margin: 0 auto;
+    line-height: 40px;
+    height: 40px;
+}
+
+/* 内容器 左侧导航 */
+.container .left-nav {
+    float: left;
+}
+
+/* 内容器 右侧导航 */
+.container .right-nav {
+    float: right;
+}
+/* 内容器内的所有a */
+.container a {
+    font-size: 12px;
+    color: #b0b0b0;
+    display: inline-block;  
+}
+
+.left-nav a:hover,
+.right-nav a:hover {
+    color: #ffffff;
+}
+
+/* 内容器 右侧购物车 */
+.container .shopping-cart {
+    float: right;
+    margin-left: 15px;
+    width: 120px;
+    /* height: 41.6px; */
+}   
+.shopping-cart a{
+    background-color: #424242;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+/* 购物车下拉框 */
+.shopping-cart .shop-box{
+    width: 400px;
+    height: 0px;
+    background-color: #fff;
+    position: absolute;
+    left: 973px;
+    top:40px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 15%);
+    transition: height 0.3s;
+    overflow: hidden;
+    z-index: 1;
+}
+.shop-box p{
+    text-align: center;
+    padding-top: 30px;
+    color: #333;
+    font-size: 14px;
+}
+/* 鼠标移出购物车样式变化 */
+.shopping-cart:hover a {
+    background-color: #fff;
+    color: #ff6700;
+}
+.shopping-cart:hover .shop-box {
+    height: 120px;
+}
+/* a标签占满单元格 */
+.shopping-cart a {
+    display: block;
+}
+
+/* 分割线 */
+.container .line {
+    margin: 0 .3em;
+    color: #424242;
+    font-size: 12px;
+}
+.app{
+    position: relative;
+}
+/* 二维码箭头 */
+.app .arrow {
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
+/* 下拉二维码 */
+.app .qrcode {
+    width: 124px;
+    /* height: 148px; */
+    height: 0;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    margin-left: -40px;
+    /* 文字继承父元素 重置样式 */
+    line-height: 0px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    /* display: none; */
+    /* 延时动画 */
+    transition: height 0.3s;
+    overflow: hidden;
+    z-index: 2;
+
+}
+.app:hover .qrcode,
+.app:hover .arrow{
+    display: block;
+    height: 148px;
+}
+.app .qrcode img{
+    width: 90px;
+    height: 90px;
+    margin: 17px 17px;
+}
+    
